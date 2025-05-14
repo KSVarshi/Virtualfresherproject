@@ -1,0 +1,19 @@
+{
+    "productID": 501,
+    "ProductName": "shirt",
+    "ProductDescription": {
+        "brand": "Peter england",
+        "size": "L",
+        "color": "Black",
+        "shortDescription": "Black half sleeve"
+    },
+    "gender": "Male",
+    "season": "Summer",
+    "usage": "Casual",
+    "productCost": 499,
+    "Ratings": {
+        "avgRating": 4.2,
+        "totalRatings": 2545
+    },
+    "image": "img1"
+}
