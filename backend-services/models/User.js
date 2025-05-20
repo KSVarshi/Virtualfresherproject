@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const preferenceSchema = new mongoose.Schema({
-  style: String,
-  color: String,
+  style: [String],
+  color: [String],
   size: String
 });
 

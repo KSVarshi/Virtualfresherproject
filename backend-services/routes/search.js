@@ -1,9 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const productRouter = express.Router();
+const productController = require("../controllers/product.controller.js") 
 const Product = require('../models/product');
 
 // GET /api/search
-router.get('/', async (req, res) => {
+productRouter.get('/products', async (req, res) => {
     try {
         const {
             name,
@@ -16,6 +17,8 @@ router.get('/', async (req, res) => {
             page = 1,
             limit = 10,
         } = req.query;
+
+        console.log(req.query)
 
         const filter = {};
 
@@ -50,4 +53,8 @@ router.get('/', async (req, res) => {
     }
 });
 
-module.exports = router;
+productRouter.get('/products/:id', productController.getProduct);
+
+productRouter.get('/products/recommendation/:id', productController.getRecommendation);
+
+module.exports = productRouter;
