@@ -60,34 +60,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Categories */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Categories</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/products?category=Apparel" className="text-gray-300 hover:text-white transition-colors">
-                  Apparel
-                </Link>
-              </li>
-              <li>
-                <Link to="/products?category=Electronics" className="text-gray-300 hover:text-white transition-colors">
-                  Electronics
-                </Link>
-              </li>
-              <li>
-                <Link to="/products?category=Accessories" className="text-gray-300 hover:text-white transition-colors">
-                  Accessories
-                </Link>
-              </li>
-              <li>
-                <Link to="/products?category=Footwear" className="text-gray-300 hover:text-white transition-colors">
-                  Footwear
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Newsletter */}
           <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>

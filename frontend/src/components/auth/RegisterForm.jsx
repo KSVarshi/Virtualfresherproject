@@ -52,11 +52,6 @@ const RegisterForm = () => {
           gender: '',
           country: '',
           password: '',
-          preference: {
-            style: '',
-            color: '',
-            size: '',
-          },
         }}
         validationSchema={RegisterSchema}
         onSubmit={handleSubmit}
@@ -215,91 +210,6 @@ const RegisterForm = () => {
                 className="mt-1 text-sm text-red-600"
               />
             </div>
-
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-2">Shopping Preferences</h3>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="preference.style" className="block text-sm font-medium text-gray-700 mb-1">
-                    Style
-                  </label>
-                  <Field
-                    as="select"
-                    name="preference.style"
-                    id="preference.style"
-                    className={`input ${
-                      errors.preference?.style && touched.preference?.style ? 'border-red-500' : ''
-                    }`}
-                  >
-                    <option value="">Select style</option>
-                    <option value="Casual">Casual</option>
-                    <option value="Formal">Formal</option>
-                    <option value="Sporty">Sporty</option>
-                    <option value="Vintage">Vintage</option>
-                  </Field>
-                  <ErrorMessage
-                    name="preference.style"
-                    component="p"
-                    className="mt-1 text-sm text-red-600"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="preference.color" className="block text-sm font-medium text-gray-700 mb-1">
-                    Color
-                  </label>
-                  <Field
-                    as="select"
-                    name="preference.color"
-                    id="preference.color"
-                    className={`input ${
-                      errors.preference?.color && touched.preference?.color ? 'border-red-500' : ''
-                    }`}
-                  >
-                    <option value="">Select color</option>
-                    <option value="Black">Black</option>
-                    <option value="Blue">Blue</option>
-                    <option value="Red">Red</option>
-                    <option value="Green">Green</option>
-                    <option value="White">White</option>
-                  </Field>
-                  <ErrorMessage
-                    name="preference.color"
-                    component="p"
-                    className="mt-1 text-sm text-red-600"
-                  />
-                </div>
-
-                <div className="col-span-2">
-                  <label htmlFor="preference.size" className="block text-sm font-medium text-gray-700 mb-1">
-                    Size
-                  </label>
-                  <Field
-                    as="select"
-                    name="preference.size"
-                    id="preference.size"
-                    className={`input ${
-                      errors.preference?.size && touched.preference?.size ? 'border-red-500' : ''
-                    }`}
-                  >
-                    <option value="">Select size</option>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                  </Field>
-                  <ErrorMessage
-                    name="preference.size"
-                    component="p"
-                    className="mt-1 text-sm text-red-600"
-                  />
-                </div>
-              </div>
-            </div>
-            
             <button
               type="submit"
               disabled={isSubmitting || loading}

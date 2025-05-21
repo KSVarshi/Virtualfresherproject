@@ -23,7 +23,6 @@ const UserPreferences = () => {
     apparelSizes: {
       tops: '',
       bottoms: '',
-      shoes: '',
     },
     priceRange: {
       min: 0,
@@ -292,28 +291,6 @@ const UserPreferences = () => {
                   <option value="36">36</option>
                   <option value="38">38</option>
                   <option value="40">40</option>
-                </select>
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="shoes" className="block text-sm font-medium text-gray-700 mb-1">
-                  Shoes Size
-                </label>
-                <select
-                  id="shoes"
-                  name="shoes"
-                  value={formData.apparelSizes.shoes}
-                  onChange={handleApparelSizeChange}
-                  className="input"
-                >
-                  <option value="">Select Size</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
                 </select>
               </div>
               
